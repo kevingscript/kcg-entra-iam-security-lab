@@ -150,3 +150,55 @@ Successfully assigned and revoked the Password Administrator role, verified the 
 - [Password Administrator Role Revocation](evidence/KCG-IAM-RBAC-Role-Revocation.png)
 - [Audit Log Modified Properties](evidence/KCG-IAM-Audit-Modified-Properties.png)
 - [Audit Log Targets](evidence/KCG-IAM-Audit-Targets.png)
+
+## 5. Microsoft Authenticator and MFA Registration
+
+### Objective
+
+Configure and verify Microsoft Authenticator as an available authentication method for a test identity in Microsoft Entra ID.
+
+### Authentication Method Configuration
+
+Reviewed the Microsoft Entra ID authentication method settings to understand how Microsoft Authenticator is made available to users.
+
+The Microsoft Authenticator authentication method was enabled for all users, with number matching enabled.
+
+This configuration supports the use of Microsoft Authenticator for multifactor authentication when an appropriate authentication challenge is required.
+
+### Authenticator Registration
+
+Registered Microsoft Authenticator for the IT test identity, Jordan Mitchell, using an iPhone 15 Pro Max.
+
+Completed the registration process and returned to the user's Authentication Methods page to verify that Microsoft Authenticator appeared as a usable authentication method.
+
+### Registration Verification
+
+Confirmed the following configuration details:
+
+- **Registered authentication method:** Microsoft Authenticator
+- **Registered device:** iPhone 15 Pro Max
+- **Default sign-in method:** Microsoft Authenticator notification
+- **System-preferred MFA method:** PhoneAppNotification
+- **System-preferred MFA feature status:** Enabled
+
+The successful registration confirmed that the test identity had an available Microsoft Authenticator method.
+
+### Security Considerations
+
+Microsoft Authenticator provides an additional authentication method that can support stronger identity security.
+
+However, authentication method registration and MFA enforcement are separate security concepts.
+
+A registered authenticator does not establish that every sign-in requires multifactor authentication or that a particular sign-in successfully completed an MFA challenge.
+
+Actual authentication requirements and results must be evaluated through Microsoft Entra Sign-in Logs.
+
+### Outcome
+
+Successfully registered Microsoft Authenticator for the IT test identity and verified its availability through the Microsoft Entra admin center.
+
+The registered method provided a foundation for subsequent authentication log analysis and MFA enforcement validation.
+
+### Supporting Evidence
+
+- [Microsoft Authenticator Registration](evidence/KCG-IAM-MFA-Authenticator-Registration.png)
