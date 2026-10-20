@@ -103,3 +103,50 @@ Group membership alone does not establish that access restrictions are correctly
 Established a controlled identity administration environment with departmental test accounts and security groups.
 
 The environment supported subsequent exercises involving privileged role management, authentication methods, and audit investigations.
+
+## 4. Role-Based Access Control (RBAC)
+
+### Objective
+
+Demonstrate the administration of privileged directory roles in Microsoft Entra ID while applying the principle of least privilege.
+
+### Role Assignment
+
+Selected the IT test identity, Jordan Mitchell, and temporarily assigned the built-in **Password Administrator** directory role.
+
+This role provides delegated password management capabilities for supported user accounts, allowing administrators to perform password-related tasks without receiving unrestricted tenant administration privileges.
+
+After assigning the role, reviewed the user's Assigned Roles page to verify that the Password Administrator role was present.
+
+### Role Revocation
+
+After completing the administrative exercise, removed the Password Administrator role from the test identity.
+
+Returned to the user's Assigned Roles page and confirmed that no directory roles remained assigned.
+
+This demonstrated the importance of removing elevated permissions when they are no longer required.
+
+### Audit Verification
+
+Reviewed Microsoft Entra Audit Logs to investigate the privileged role changes.
+
+The audit records confirmed successful role assignment and removal operations. Examined the event details, including the target identity and modified role properties, to understand how Microsoft Entra ID records administrative changes.
+
+### Security Considerations
+
+Privileged roles should be assigned only when necessary and removed when their intended purpose has been completed.
+
+Temporary role assignment reduces unnecessary exposure to elevated permissions. Audit logging provides supporting evidence that administrative changes occurred and helps investigators reconstruct identity-related activity.
+
+Although Privileged Identity Management (PIM) offers additional capabilities for managing privileged access, it was not available under the tenant's Microsoft Entra ID Free licensing tier.
+
+### Outcome
+
+Successfully assigned and revoked the Password Administrator role, verified the resulting access state, and investigated the associated audit records.
+
+### Supporting Evidence
+
+- [Password Administrator Role Assignment](evidence/KCG-IAM-RBAC-Role-Assignment.png)
+- [Password Administrator Role Revocation](evidence/KCG-IAM-RBAC-Role-Revocation.png)
+- [Audit Log Modified Properties](evidence/KCG-IAM-Audit-Modified-Properties.png)
+- [Audit Log Targets](evidence/KCG-IAM-Audit-Targets.png)
