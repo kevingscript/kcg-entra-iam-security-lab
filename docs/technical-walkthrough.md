@@ -325,3 +325,80 @@ Identified advanced identity security capabilities requiring additional licensin
 
 - [Security Defaults Enabled](evidence/KCG-IAM-Security-Defaults-Enabled.png)
 - [Licensing Assessment](evidence/KCG-IAM-Licensing-Assessment.png)
+
+## 8. Final Security Assessment and Lessons Learned
+
+### Project Summary
+
+Completed a hands-on Microsoft Entra ID security lab focused on identity administration, role-based access control, authentication configuration, security auditing, and investigative analysis.
+
+The project demonstrated practical identity security administration in a controlled learning environment using Microsoft Entra ID Free.
+
+### Completed Activities
+
+- Created and managed test identities representing IT, Human Resources, and Finance.
+- Organized departmental identities using Microsoft Entra security groups.
+- Assigned and revoked the Password Administrator directory role.
+- Verified privileged role changes through Microsoft Entra Audit Logs.
+- Registered Microsoft Authenticator for a test identity.
+- Investigated successful authentication activity using Microsoft Entra Sign-in Logs.
+- Confirmed that Security Defaults were enabled.
+- Evaluated licensing limitations affecting advanced identity security capabilities.
+- Documented an authentication enforcement finding requiring additional validation.
+
+### Security Assessment Summary
+
+**Finding ID:** KCG-IAM-001
+
+**Finding:** MFA Enforcement Requires Validation
+
+**Severity:** Low
+
+**Status:** Open, pending validation
+
+A successful sign-in was observed with a single-factor authentication requirement despite Microsoft Authenticator being registered and Security Defaults being enabled.
+
+This observation does not establish that Security Defaults were malfunctioning or that an account was compromised.
+
+Further controlled authentication testing is necessary to determine whether MFA challenges are enforced under applicable conditions.
+
+### Lessons Learned
+
+**Least Privilege**
+
+Privileged access should be granted only when necessary and revoked when the administrative task is complete.
+
+**Auditability**
+
+Directory audit records provide important evidence for investigating administrative changes and verifying privileged access activity.
+
+**Authentication Verification**
+
+Registering an authentication method does not prove that multifactor authentication was required or completed during a particular sign-in.
+
+**Security Configuration**
+
+Enabled security controls should be evaluated alongside actual authentication events and supporting evidence.
+
+**Licensing Awareness**
+
+Security assessments must account for licensing restrictions and distinguish available features from controls that have been implemented.
+
+**Evidence-Based Reporting**
+
+Security findings should accurately describe observed behavior, potential risks, recommended actions, and unresolved validation requirements.
+
+### Recommended Next Steps
+
+1. Conduct a controlled MFA sign-in test using the registered test identity.
+2. Review the resulting Sign-in Logs and Authentication Details.
+3. Update finding KCG-IAM-001 based on verified authentication results.
+4. Explore advanced Conditional Access and identity protection capabilities if appropriate premium licensing becomes available.
+
+### Final Outcome
+
+Successfully completed the planned identity administration and security investigation exercises.
+
+Produced a documented technical walkthrough supported by Microsoft Entra ID screenshots and a security finding requiring further validation.
+
+The project demonstrates foundational skills in Identity and Access Management, privileged access administration, authentication analysis, security auditing, and technical documentation.
