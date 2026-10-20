@@ -267,3 +267,61 @@ The exercise strengthened practical skills in authentication log analysis, secur
 ### Supporting Evidence
 
 - [Single-Factor Authentication Sign-in](evidence/KCG-IAM-SignIn-Single-Factor-Authentication.png)
+
+## 7. Security Defaults and Licensing Assessment
+
+### Objective
+
+Evaluate the Microsoft Entra ID tenant's baseline security configuration, available licensing, and limitations affecting advanced identity security capabilities.
+
+### Security Defaults Assessment
+
+Accessed the Microsoft Entra admin center and reviewed the tenant's Security Defaults configuration.
+
+Confirmed that Security Defaults were enabled.
+
+Security Defaults provide baseline identity protection capabilities, including multifactor authentication requirements under applicable conditions.
+
+However, enabling Security Defaults does not establish that every authentication event will require an MFA challenge.
+
+### Licensing Assessment
+
+Reviewed the tenant's licensing information through Microsoft Entra ID.
+
+The environment operated under the Microsoft Entra ID Free licensing tier.
+
+The Licenses > All Products page displayed the message:
+
+**No account SKUs found.**
+
+No Microsoft Entra ID P1 or P2 licenses were available for the lab.
+
+### Premium Feature Limitations
+
+The licensing assessment identified several advanced identity security capabilities that were outside the scope of hands-on configuration:
+
+- **Conditional Access:** Custom policy configuration requires appropriate premium licensing.
+- **Privileged Identity Management (PIM):** Advanced privileged role management was unavailable.
+- **Identity Protection:** Premium risk-based identity protection capabilities were unavailable.
+- **Access Reviews:** Advanced identity governance review capabilities were unavailable.
+
+These limitations were documented rather than represented as completed implementations.
+
+### Security Considerations
+
+Security Defaults provide an important baseline for identity security in environments without premium Microsoft Entra licensing.
+
+However, administrators must distinguish between enabled security settings, registered authentication methods, and observed authentication behavior.
+
+The single-factor sign-in identified during the authentication investigation reinforced the importance of validating security controls through actual sign-in records.
+
+### Outcome
+
+Confirmed that Security Defaults were enabled and documented the tenant's Microsoft Entra ID Free licensing limitations.
+
+Identified advanced identity security capabilities requiring additional licensing and established clear boundaries for the project's implemented security controls.
+
+### Supporting Evidence
+
+- [Security Defaults Enabled](evidence/KCG-IAM-Security-Defaults-Enabled.png)
+- [Licensing Assessment](evidence/KCG-IAM-Licensing-Assessment.png)
