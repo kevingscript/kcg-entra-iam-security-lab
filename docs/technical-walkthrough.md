@@ -202,3 +202,68 @@ The registered method provided a foundation for subsequent authentication log an
 ### Supporting Evidence
 
 - [Microsoft Authenticator Registration](evidence/KCG-IAM-MFA-Authenticator-Registration.png)
+
+## 6. Sign-in Logs and Authentication Investigation
+
+### Objective
+
+Investigate Microsoft Entra ID authentication activity to determine the authentication requirements and results associated with a test user's sign-in.
+
+### Investigation Process
+
+Accessed Microsoft Entra ID Sign-in Logs for the IT test identity, Jordan Mitchell.
+
+Reviewed the available sign-in activity and opened the details of a successful interactive sign-in.
+
+Examined the Basic Info and Authentication Details tabs to understand how the authentication event was processed.
+
+### Authentication Findings
+
+The investigated sign-in displayed the following results:
+
+- **Test identity:** Jordan Mitchell
+- **Sign-in status:** Success
+- **Authentication requirement:** Single-factor authentication
+- **Authentication result:** Successful password authentication
+- **Microsoft Authenticator registration:** Confirmed
+- **Security Defaults:** Enabled
+
+Although Microsoft Authenticator was registered as an available authentication method, the investigated sign-in did not demonstrate a completed multifactor authentication challenge.
+
+### Security Analysis
+
+This investigation demonstrated the importance of distinguishing authentication method availability from authentication enforcement.
+
+Microsoft Entra ID Security Defaults were enabled, but this does not establish that every successful sign-in must receive an MFA challenge.
+
+The observed single-factor sign-in was therefore documented as an authentication enforcement validation concern rather than evidence of a confirmed security compromise.
+
+Additional controlled sign-in testing would be required to determine whether and when MFA challenges are enforced for the test identity.
+
+### Security Finding
+
+**Finding ID:** KCG-IAM-001
+
+**Title:** MFA Enforcement Requires Validation
+
+**Severity:** Low
+
+**Status:** Open, pending validation
+
+**Observation:** A successful sign-in was recorded with a single-factor authentication requirement despite Microsoft Authenticator being registered and Security Defaults being enabled.
+
+**Potential Risk:** Without validating authentication enforcement, administrators may incorrectly assume that the presence of a registered authentication method guarantees MFA protection for every sign-in.
+
+**Recommended Action:** Conduct a controlled authentication test and review the resulting Microsoft Entra Sign-in Logs to determine whether an MFA challenge was required and successfully completed.
+
+### Outcome
+
+Successfully investigated authentication activity using Microsoft Entra Sign-in Logs.
+
+Identified and documented a single-factor authentication observation requiring additional validation.
+
+The exercise strengthened practical skills in authentication log analysis, security investigation, and evidence-based reporting.
+
+### Supporting Evidence
+
+- [Single-Factor Authentication Sign-in](evidence/KCG-IAM-SignIn-Single-Factor-Authentication.png)
