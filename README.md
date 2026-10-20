@@ -41,3 +41,18 @@ The lab also explored the capabilities and limitations of Microsoft Entra ID Fre
 - Analyzed authentication activity and identified a successful single-factor sign-in requiring further MFA enforcement validation.
 - Verified that Security Defaults were enabled and assessed Microsoft Entra ID Free licensing limitations.
 - Documented security finding **KCG-IAM-001**, including the observation, potential risk, recommended action, and validation status.
+
+## Supporting Evidence
+
+The following screenshots document the identity administration, privileged access management, authentication investigation, and security assessment activities completed during this lab.
+
+| Evidence | Description |
+|---|---|
+| [RBAC Role Assignment](docs/evidence/KCG-IAM-RBAC-Role-Assignment.png) | Password Administrator role assigned to the test identity. |
+| [RBAC Role Revocation](docs/evidence/KCG-IAM-RBAC-Role-Revocation.png) | Verification that the privileged directory role was removed. |
+| [Audit Log Modified Properties](docs/evidence/KCG-IAM-Audit-Modified-Properties.png) | Audit record details showing role-related properties. |
+| [Audit Log Targets](docs/evidence/KCG-IAM-Audit-Targets.png) | Target identity and role information associated with the audit event. |
+| [Microsoft Authenticator Registration](docs/evidence/KCG-IAM-MFA-Authenticator-Registration.png) | Registered authentication method and default sign-in configuration. |
+| [Single-Factor Authentication Investigation](docs/evidence/KCG-IAM-SignIn-Single-Factor-Authentication.png) | Successful sign-in recorded with a single-factor authentication requirement. |
+| [Security Defaults Configuration](docs/evidence/KCG-IAM-Security-Defaults-Enabled.png) | Confirmation that Microsoft Entra Security Defaults were enabled. |
+| [Licensing Assessment](docs/evidence/KCG-IAM-Licensing-Assessment.png) | Tenant licensing information used to assess premium feature availability. |
