@@ -65,3 +65,41 @@ Security monitoring and investigation activities used Microsoft Entra Audit Logs
 All administrative and investigative activities were performed within a controlled learning environment using test identities.
 
 The project did not involve a production security incident or confirmed account compromise.
+
+## 3. Identity and Security Group Administration
+
+### Objective
+
+Practice managing cloud identities and organizing user access through department-based security groups in Microsoft Entra ID.
+
+### Identity Management
+
+Created and managed dedicated test identities representing IT, Human Resources, and Finance departments.
+
+The test identities provided a controlled environment for practicing user administration, role assignments, authentication configuration, and security investigations without affecting production users.
+
+An external guest identity was also included to explore identity management beyond internal organizational accounts.
+
+### Security Group Administration
+
+Created and managed three department-based security groups:
+
+- `SG-KCG-IT`
+- `SG-KCG-HR`
+- `SG-KCG-FINANCE`
+
+These groups provided a foundation for organizing departmental identities and practicing group-based access administration.
+
+### Security Considerations
+
+Department-based security groups help administrators organize access according to business responsibilities.
+
+This lab emphasized the principle of least privilege, where users should receive only the access necessary to perform their assigned tasks.
+
+Group membership alone does not establish that access restrictions are correctly enforced. Effective access control also requires appropriate permissions, resource assignments, and validation.
+
+### Outcome
+
+Established a controlled identity administration environment with departmental test accounts and security groups.
+
+The environment supported subsequent exercises involving privileged role management, authentication methods, and audit investigations.
