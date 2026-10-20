@@ -17,3 +17,27 @@ The lab also explored the capabilities and limitations of Microsoft Entra ID Fre
 **Platform:** Microsoft Entra ID Free
 
 **Documentation:** [View Technical Walkthrough](docs/technical-walkthrough.md)
+
+## Technologies & Skills
+
+- Microsoft Entra ID
+- Identity and Access Management (IAM)
+- Role-Based Access Control (RBAC)
+- Microsoft Authenticator
+- Multifactor Authentication (MFA)
+- Microsoft Entra Audit Logs
+- Microsoft Entra Sign-in Logs
+- Security Defaults
+- Principle of Least Privilege
+- Security Investigation and Documentation
+
+## Project Highlights
+
+- Created and managed test identities representing IT, Human Resources, and Finance departments.
+- Organized departmental identities using Microsoft Entra security groups.
+- Assigned and revoked the Password Administrator directory role to demonstrate least-privilege access management.
+- Investigated administrative changes using Microsoft Entra Audit Logs.
+- Registered and verified Microsoft Authenticator for a test identity.
+- Analyzed authentication activity and identified a successful single-factor sign-in requiring further MFA enforcement validation.
+- Verified that Security Defaults were enabled and assessed Microsoft Entra ID Free licensing limitations.
+- Documented security finding **KCG-IAM-001**, including the observation, potential risk, recommended action, and validation status.
